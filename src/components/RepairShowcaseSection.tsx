@@ -70,9 +70,9 @@ const RepairShowcaseSection = ({ image, title, description, highlights }: Repair
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 pt-8 border-t border-border">
               {[
-                { icon: Zap, label: "Diagnostic", value: "15 min" },
-                { icon: Shield, label: "Garantie", value: "3 ans" },
-                { icon: Clock, label: "Intervention", value: "48h max" },
+                { icon: Zap, label: "Diagnostic", value: "15 min", color: "text-service-blue" },
+                { icon: Shield, label: "Garantie", value: "3 ans", color: "text-service-emerald" },
+                { icon: Clock, label: "Intervention", value: "48h max", color: "text-service-orange" },
               ].slice(0, 2).map((stat, index) => (
                 <motion.div
                   key={index}
@@ -84,7 +84,7 @@ const RepairShowcaseSection = ({ image, title, description, highlights }: Repair
                 >
                   <stat.icon className="h-6 w-6 text-accent mx-auto mb-2" />
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
-                  <p className="font-bold text-foreground">{stat.value}</p>
+                  <p className={`font-bold ${stat.color}`}>{stat.value}</p>
                 </motion.div>
               ))}
             </div>

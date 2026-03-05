@@ -56,10 +56,10 @@ const ZonesIntervention = () => {
 
   // Stats adaptées
   const stats = [
-    { icon: MapPin, value: "50+", label: "Villes desservies" },
-    { icon: Building2, value: "40", label: "Arrondissements Paris" },
-    { icon: Users, value: "5000+", label: "Clients satisfaits" },
-    { icon: Clock, value: "24-48h", label: "Délai d'intervention" }
+    { icon: MapPin, value: "50+", label: "Villes desservies", color: "text-service-blue" },
+    { icon: Building2, value: "40", label: "Arrondissements Paris", color: "text-service-violet" },
+    { icon: Users, value: "5000+", label: "Clients satisfaits", color: "text-service-emerald" },
+    { icon: Clock, value: "24-48h", label: "Délai d'intervention", color: "text-service-orange" }
   ];
 
   // FAQ adaptée
@@ -201,7 +201,7 @@ const ZonesIntervention = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-4">
                   <stat.icon className="w-6 h-6" />
                 </div>
-                <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+                <div className={`text-3xl font-bold ${stat.color}`}>{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
