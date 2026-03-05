@@ -103,7 +103,7 @@ const AboutUsPage = () => {
               <ChevronRight className="h-4 w-4" />
               <span>Qui Sommes-Nous</span>
             </div>
-            <Badge className="gap-2 px-3 py-1.5 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm bg-service-blue">
+            <Badge variant="accent" className="gap-2 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               <Trophy className="h-3.5 w-3.5" /> Experts depuis 10 ans
             </Badge>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-foreground">
@@ -161,7 +161,7 @@ const AboutUsPage = () => {
       <section className="py-16 bg-section-gradient">
         <div className="container mx-auto px-4">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="accent" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Nos Résultats</Badge>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">Nos Résultats</span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Nos Chiffres Clés</h2>
             <p className="text-muted-foreground">Une décennie d'engagement envers l'excellence et la satisfaction client</p>
           </motion.div>

@@ -51,9 +51,9 @@ const ServicesSection = () => (
   <section id="services" className="py-12 sm:py-16 md:py-20 bg-section-gradient relative overflow-hidden">
     <div className="container mx-auto px-4 relative z-10">
       <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
-        <Badge variant="accent" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">
           <Shield className="h-3.5 w-3.5" /> Solutions Complètes
-        </Badge>
+        </span>
         <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
           Services Complets de Réparation, Installation et Motorisation de Volets Roulants
         </h2>

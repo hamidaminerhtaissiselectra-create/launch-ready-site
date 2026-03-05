@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+
 
 const features = [
   "Intervention rapide et efficace sous 48h",
@@ -66,9 +66,9 @@ const ImageTextSection = () => {
           >
             <div className="space-y-6">
               <div>
-                <Badge variant="serviceOrange" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">
                   Notre Expertise
-                </Badge>
+                </span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-4 mb-3">
                   Réparation et Maintenance de Volets Roulants
                 </h2>

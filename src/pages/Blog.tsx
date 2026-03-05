@@ -43,7 +43,7 @@ const BlogPage = () => {
               <ChevronRight className="h-4 w-4" />
               <span>Blog Expert</span>
             </div>
-            <Badge className="gap-2 px-3 py-1.5 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm bg-service-blue">
+            <Badge variant="accent" className="gap-2 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               <BookOpen className="h-3.5 w-3.5" /> Conseils & Guides
             </Badge>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-foreground">
@@ -141,7 +141,7 @@ const BlogPage = () => {
       <section className="py-16 bg-section-gradient">
         <div className="container mx-auto px-4 text-center">
           <motion.div {...fadeUp}>
-            <Badge variant="accent" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Nos Services</Badge>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">Nos Services</span>
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">Besoin d'une intervention ?</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Nos experts sont disponibles pour vous conseiller et intervenir rapidement. Contactez-nous dès maintenant.

@@ -281,7 +281,7 @@ const QuoteFormSection = () => {
                 ) : <div />}
                 {step < 3 ? (
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button onClick={() => setStep(step + 1)} disabled={!canNext()} className="bg-accent text-white hover:bg-accent/90 gap-2 px-8 rounded-full shadow-lg shadow-accent/20 transition-all">
+                    <Button onClick={() => setStep(step + 1)} disabled={!canNext()} className="bg-accent text-white hover:bg-accent/90 gap-2 px-8 rounded-full shadow-lg shadow-accent/20 transition-all disabled:bg-accent/60 disabled:text-white/80 disabled:opacity-100">
                       Continuer <ArrowRight className="h-4 w-4" />
                     </Button>
                   </motion.div>

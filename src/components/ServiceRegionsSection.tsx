@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -96,9 +96,9 @@ const ServiceRegionsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <Badge variant="serviceBlue" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">
             <MapPin className="h-3.5 w-3.5" /> Nos Régions d'Intervention
-          </Badge>
+          </span>
           <h2 className="font-display text-3xl font-bold text-foreground mt-2 mb-4">
             Nos Régions d'Intervention en France
           </h2>

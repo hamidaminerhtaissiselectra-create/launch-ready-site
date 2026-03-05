@@ -52,7 +52,7 @@ const FAQSection = () => {
     <section className="py-12 sm:py-16 md:py-20 bg-section-gradient relative overflow-hidden" itemScope itemType="https://schema.org/FAQPage">
       <div className="container mx-auto px-4 relative">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 text-sm font-semibold border border-amber-500/20 mb-4">FAQ</span>
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">FAQ</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
             Questions Fréquentes — Réparation & Installation de Volets Roulants à Paris
           </h2>

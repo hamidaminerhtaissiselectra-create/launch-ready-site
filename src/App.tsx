@@ -59,10 +59,7 @@ const App = () => (
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="/cgv" element={<CGV />} />
-
-            {/* Unified handler: IDF city pages or region redirects */}
             <Route path="/zones-intervention/:slug" element={<ZoneCityRoute />} />
-
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

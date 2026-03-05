@@ -57,7 +57,7 @@ const InstallationRemplacementPage = () => {
             <span>Installation & Remplacement de Volets</span>
           </div>
           <motion.div {...heroEntry(0)} className="max-w-3xl">
-            <Badge variant="serviceBlue" className="gap-2 px-3 py-1.5 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm">
+            <Badge variant="accent" className="gap-2 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               <RefreshCcw className="h-3.5 w-3.5" /> Fabrication sur-mesure
             </Badge>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-foreground">
@@ -86,9 +86,9 @@ const InstallationRemplacementPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="serviceCyan" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">
               <RefreshCcw className="h-3.5 w-3.5" /> Avantages
-            </Badge>
+            </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Pourquoi Installer ou Remplacer Vos Volets Roulants ?</h2>
             <p className="text-muted-foreground leading-relaxed">
               Un investissement rentable pour le confort, la sécurité et la performance énergétique. Éligible <strong className="text-foreground">MaPrimeRénov'</strong> grâce à notre certification RGE.
@@ -112,7 +112,7 @@ const InstallationRemplacementPage = () => {
       <section className="py-16 bg-section-gradient">
         <div className="container mx-auto px-4">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="serviceEmerald" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold border border-service-emerald/20 mb-4">Matériaux</Badge>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">Matériaux</span>
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">Quel Matériau Choisir ?</h2>
             <p className="text-muted-foreground">Nous vous conseillons sur le meilleur choix selon vos besoins et votre budget.</p>
           </motion.div>

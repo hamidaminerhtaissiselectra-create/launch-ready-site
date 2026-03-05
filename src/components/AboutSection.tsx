@@ -36,30 +36,8 @@ const AboutSection = () => (
       </motion.div>
 
       <div className="grid lg:grid-cols-2 gap-16 items-center">
-        <motion.div {...fadeLeft}>
-          <p className="text-muted-foreground mb-10 leading-relaxed">
-            Implantés à Paris et en Île-de-France, nos techniciens certifiés interviennent sur toutes les marques de volets roulants : Somfy, Bubendorff, Profalux, Simu, Nice, Becker et bien d'autres. Chaque intervention est réalisée avec des pièces d'origine, dans le respect des normes de sécurité en vigueur. Notre certification RGE vous permet de bénéficier des aides de l'État (MaPrimeRénov', éco-PTZ) pour vos travaux d'isolation.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-6 mb-10">
-            {points.map((p, i) => (
-              <motion.div key={p.text} {...staggerItem(i)} className="flex items-start gap-4 p-2 rounded-xl transition-colors group">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${p.color.split(" ")[0]} shadow-sm border border-white/10`}>
-                  <p.icon className={`h-5 w-5 ${p.color.split(" ")[1]}`} />
-                </div>
-                <span className="text-sm font-medium text-foreground leading-snug">{p.text}</span>
-              </motion.div>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {certifications.map((c) => (
-              <span key={c.label} className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border ${c.color}`}>
-                <CheckCircle2 className="h-3.5 w-3.5" /> {c.label}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div {...fadeRight} className="space-y-8">
+        {/* Chiffres & cartes — maintenant à gauche */}
+        <motion.div {...fadeLeft} className="space-y-8">
           <div className="bg-accent rounded-3xl p-10 text-white relative overflow-hidden shadow-2xl">
             <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-white/10 blur-2xl" />
             <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-white/10 blur-2xl" />
@@ -94,6 +72,30 @@ const AboutSection = () => (
                 <div className="font-bold text-foreground text-sm mb-1">{item.label}</div>
                 <div className="text-xs text-muted-foreground font-medium">{item.desc}</div>
               </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Texte, points & certifications — maintenant à droite */}
+        <motion.div {...fadeRight}>
+          <p className="text-muted-foreground mb-10 leading-relaxed">
+            Implantés à Paris et en Île-de-France, nos techniciens certifiés interviennent sur toutes les marques de volets roulants : Somfy, Bubendorff, Profalux, Simu, Nice, Becker et bien d'autres. Chaque intervention est réalisée avec des pièces d'origine, dans le respect des normes de sécurité en vigueur. Notre certification RGE vous permet de bénéficier des aides de l'État (MaPrimeRénov', éco-PTZ) pour vos travaux d'isolation.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+            {points.map((p, i) => (
+              <motion.div key={p.text} {...staggerItem(i)} className="flex items-start gap-4 p-2 rounded-xl transition-colors group">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${p.color.split(" ")[0]} shadow-sm border border-white/10`}>
+                  <p.icon className={`h-5 w-5 ${p.color.split(" ")[1]}`} />
+                </div>
+                <span className="text-sm font-medium text-foreground leading-snug">{p.text}</span>
+              </motion.div>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {certifications.map((c) => (
+              <span key={c.label} className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border ${c.color}`}>
+                <CheckCircle2 className="h-3.5 w-3.5" /> {c.label}
+              </span>
             ))}
           </div>
         </motion.div>

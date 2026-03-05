@@ -57,7 +57,7 @@ const DepannageExpressPage = () => {
             <span>Dépannage Express</span>
           </div>
           <motion.div {...heroEntry(0)} className="max-w-3xl">
-            <Badge variant="serviceBlue" className="gap-2 px-3 py-1.5 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm">
+            <Badge variant="accent" className="gap-2 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               <Zap className="h-3.5 w-3.5" /> Intervention rapide
             </Badge>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-foreground">
@@ -86,7 +86,7 @@ const DepannageExpressPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="accent" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Nos Engagements</Badge>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">Nos Engagements</span>
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">Nos Engagements Dépannage Express</h2>
             <p className="text-muted-foreground">Un service d'urgence fiable, transparent et efficace — c'est la promesse Répar'Action Volets.</p>
           </motion.div>
@@ -108,7 +108,7 @@ const DepannageExpressPage = () => {
       <section className="py-16 bg-section-gradient">
         <div className="container mx-auto px-4">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="serviceRose" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Urgences</Badge>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">Urgences</span>
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">Les Situations que Nous Traitons en Urgence</h2>
             <p className="text-muted-foreground">Quelle que soit la panne, nous avons la solution pour la résoudre rapidement.</p>
           </motion.div>
@@ -133,7 +133,7 @@ const DepannageExpressPage = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="destructive" size="sm" className="w-full rounded-xl gap-2 mt-auto" asChild>
+                  <Button variant="accent" size="sm" className="w-full rounded-xl gap-2 mt-auto" asChild>
                     <a href="tel:0603205967"><Phone className="h-4 w-4" /> Urgence 24h/7j</a>
                   </Button>
                 </div>

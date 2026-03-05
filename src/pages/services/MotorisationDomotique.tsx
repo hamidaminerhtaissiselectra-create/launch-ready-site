@@ -53,7 +53,7 @@ const MotorisationDomotiquePage = () => {
             <span>Motorisation & Domotique</span>
           </div>
           <motion.div {...heroEntry(0)} className="max-w-3xl">
-            <Badge variant="serviceBlue" className="gap-2 px-3 py-1.5 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm">
+            <Badge variant="accent" className="gap-2 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
               <Cpu className="h-3.5 w-3.5" /> Maison connectée
             </Badge>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-foreground">
@@ -82,9 +82,9 @@ const MotorisationDomotiquePage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="serviceViolet" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">
               <Cpu className="h-3.5 w-3.5" /> Confort & Innovation
-            </Badge>
+            </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Pourquoi Motoriser Vos Volets Roulants ?</h2>
             <p className="text-muted-foreground leading-relaxed">
               Plus de confort, plus de sécurité, plus d'économies d'énergie. La motorisation transforme votre quotidien.
@@ -113,7 +113,7 @@ const MotorisationDomotiquePage = () => {
       <section className="py-16 bg-section-gradient">
         <div className="container mx-auto px-4">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-12">
-            <Badge variant="serviceCyan" className="gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4">Solutions</Badge>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20 mb-4">Solutions</span>
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">Nos Solutions de Motorisation</h2>
             <p className="text-muted-foreground">Chaque solution est adaptée à votre configuration et à vos besoins.</p>
           </motion.div>
