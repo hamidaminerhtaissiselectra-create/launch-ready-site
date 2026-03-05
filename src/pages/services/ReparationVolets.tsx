@@ -95,7 +95,7 @@ const ReparationVoletsPage = () => {
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   {p.urgence && (
-                    <Badge className="absolute top-4 right-4 bg-service-rose text-white border-none gap-1 text-xs font-bold">
+                    <Badge className="absolute top-4 right-4 text-xs font-bold border bg-service-rose/90 text-white border-service-rose shadow-md backdrop-blur-sm gap-1">
                       <AlertTriangle className="h-3 w-3" /> Urgence
                     </Badge>
                   )}
