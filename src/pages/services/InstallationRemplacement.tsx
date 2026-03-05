@@ -25,9 +25,9 @@ const avantages = [
 ];
 
 const types = [
-  { title: "Volets roulants en aluminium", desc: "Le choix le plus populaire. L'aluminium offre le meilleur rapport poids/résistance, une excellente isolation thermique et une durabilité exceptionnelle.", points: ["Léger et résistant", "Isolation thermique et phonique", "200+ coloris disponibles", "Durée de vie 20+ ans"], color: "border-service-blue/20", badge: "Populaire", badgeColor: "bg-service-blue/10 text-service-blue border-service-blue/20", image: "/images/materiaux/alu.webp", data: ["Isolation : R=0.25", "Résistance : Haute", "Entretien : Nul"] },
-  { title: "Volets roulants en PVC", desc: "Solution économique et performante, les volets en PVC offrent un bon niveau d'isolation et une grande facilité d'entretien.", points: ["Prix accessible", "Entretien minimal", "Bonne isolation", "Résistance aux UV"], color: "border-service-emerald/20", badge: "Économique", badgeColor: "bg-service-emerald/10 text-service-emerald border-service-emerald/20", image: "/images/materiaux/pvc.webp", data: ["Isolation : R=0.22", "Résistance : Moyenne", "Entretien : Eau savonneuse"] },
-  { title: "Volets roulants solaires", desc: "Installation de volets solaires autonomes avec panneau photovoltaïque intégré. Idéaux en rénovation car ils ne nécessitent aucun raccordement électrique.", points: ["Zéro câblage", "Énergie gratuite", "Autonomie 45 jours", "Marques Somfy/Bubendorff"], color: "border-service-orange/20", badge: "Éco-Responsable", badgeColor: "bg-service-orange/10 text-service-orange border-service-orange/20", image: "/images/materiaux/solaire.webp", data: ["Installation : 1h", "Batterie : 10 ans", "Économie : 100% élec"] },
+  { title: "Volets roulants en aluminium", desc: "Le choix le plus populaire. L'aluminium offre le meilleur rapport poids/résistance, une excellente isolation thermique et une durabilité exceptionnelle.", points: ["Léger et résistant", "Isolation thermique et phonique", "200+ coloris disponibles", "Durée de vie 20+ ans"], color: "border-service-blue/20", badge: "Populaire", badgeColor: "bg-service-blue/90 text-white border-service-blue", image: "/images/materiaux/alu.webp", data: ["Isolation : R=0.25", "Résistance : Haute", "Entretien : Nul"] },
+  { title: "Volets roulants en PVC", desc: "Solution économique et performante, les volets en PVC offrent un bon niveau d'isolation et une grande facilité d'entretien.", points: ["Prix accessible", "Entretien minimal", "Bonne isolation", "Résistance aux UV"], color: "border-service-emerald/20", badge: "Économique", badgeColor: "bg-service-emerald/90 text-white border-service-emerald", image: "/images/materiaux/pvc.webp", data: ["Isolation : R=0.22", "Résistance : Moyenne", "Entretien : Eau savonneuse"] },
+  { title: "Volets roulants solaires", desc: "Installation de volets solaires autonomes avec panneau photovoltaïque intégré. Idéaux en rénovation car ils ne nécessitent aucun raccordement électrique.", points: ["Zéro câblage", "Énergie gratuite", "Autonomie 45 jours", "Marques Somfy/Bubendorff"], color: "border-service-orange/20", badge: "Éco-Responsable", badgeColor: "bg-service-orange/90 text-white border-service-orange", image: "/images/materiaux/solaire.webp", data: ["Installation : 1h", "Batterie : 10 ans", "Économie : 100% élec"] },
 ];
 
 const InstallationRemplacementPage = () => {
@@ -124,7 +124,7 @@ const InstallationRemplacementPage = () => {
                 <div className="relative h-56 overflow-hidden">
                   <img src={t.image} alt={t.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <Badge className={`absolute top-4 right-4 ${t.badgeColor} border-none font-bold`}>{t.badge}</Badge>
+                  <Badge className={`absolute top-4 right-4 text-xs font-bold border ${t.badgeColor} shadow-md backdrop-blur-sm`}>{t.badge}</Badge>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{t.title}</h3>

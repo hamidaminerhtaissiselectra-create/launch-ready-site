@@ -21,9 +21,9 @@ import motorizationTechnicianImg from "@/assets/paris-defense-motorisation.webp"
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const solutions = [
-  { title: "Motorisation filaire", desc: "La solution la plus fiable et économique. Le moteur est commandé par un interrupteur mural fixe.", points: ["Prix accessible", "Très fiable", "Aucune pile à changer", "Installation simple"], prix: "à partir de 200€/volet", color: "border-service-blue/20", badgeColor: "bg-service-blue/10 text-service-blue border-service-blue/20", image: motorizationWiredImg, data: ["Type : Filaire 230V", "Couple : 6 à 50 Nm", "Garantie : 5 ans"] },
-  { title: "Motorisation radio (sans fil)", desc: "Le moteur est commandé par une télécommande sans fil. Plus de flexibilité, centralisation possible.", points: ["Télécommande sans fil", "Pas de câblage mural", "Centralisation possible", "Programmation horaire"], prix: "à partir de 300€/volet", color: "border-service-rose/20", badgeColor: "bg-service-rose/10 text-service-rose border-service-rose/20", image: motorizationRadioImg, data: ["Protocole : RTS / io", "Portée : 20m (murs)", "Multi-canaux"] },
-  { title: "Motorisation connectée", desc: "Contrôlez vos volets depuis votre smartphone. Compatible Somfy TaHoma, Google Home, Alexa, Apple HomeKit.", points: ["Contrôle smartphone", "Compatible assistants vocaux", "Scénarios automatisés", "Gestion à distance"], prix: "à partir de 450€/volet", color: "border-service-violet/20", badgeColor: "bg-service-violet/10 text-service-violet border-service-violet/20", image: motorizationSmartImg, data: ["App : TaHoma / Home", "Feedback : Temps réel", "Cloud sécurisé"] },
+  { title: "Motorisation filaire", desc: "La solution la plus fiable et économique. Le moteur est commandé par un interrupteur mural fixe.", points: ["Prix accessible", "Très fiable", "Aucune pile à changer", "Installation simple"], prix: "à partir de 200€/volet", color: "border-service-blue/20", badgeColor: "bg-service-blue/90 text-white border-service-blue", image: motorizationWiredImg, data: ["Type : Filaire 230V", "Couple : 6 à 50 Nm", "Garantie : 5 ans"] },
+  { title: "Motorisation radio (sans fil)", desc: "Le moteur est commandé par une télécommande sans fil. Plus de flexibilité, centralisation possible.", points: ["Télécommande sans fil", "Pas de câblage mural", "Centralisation possible", "Programmation horaire"], prix: "à partir de 300€/volet", color: "border-service-rose/20", badgeColor: "bg-service-rose/90 text-white border-service-rose", image: motorizationRadioImg, data: ["Protocole : RTS / io", "Portée : 20m (murs)", "Multi-canaux"] },
+  { title: "Motorisation connectée", desc: "Contrôlez vos volets depuis votre smartphone. Compatible Somfy TaHoma, Google Home, Alexa, Apple HomeKit.", points: ["Contrôle smartphone", "Compatible assistants vocaux", "Scénarios automatisés", "Gestion à distance"], prix: "à partir de 450€/volet", color: "border-service-violet/20", badgeColor: "bg-service-violet/90 text-white border-service-violet", image: motorizationSmartImg, data: ["App : TaHoma / Home", "Feedback : Temps réel", "Cloud sécurisé"] },
 ];
 
 const MotorisationDomotiquePage = () => {
@@ -125,7 +125,7 @@ const MotorisationDomotiquePage = () => {
                 <div className="relative h-56 overflow-hidden">
                   <img src={s.image} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <Badge className={`absolute top-4 right-4 ${s.badgeColor} border-none`}>{s.prix}</Badge>
+                  <Badge className={`absolute top-4 right-4 text-xs font-bold border ${s.badgeColor} shadow-md backdrop-blur-sm`}>{s.prix}</Badge>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{s.title}</h3>

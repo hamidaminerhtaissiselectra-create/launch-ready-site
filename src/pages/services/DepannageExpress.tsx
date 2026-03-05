@@ -18,9 +18,9 @@ import emergencyTechnicianImg from "@/assets/paris-sacre-coeur-depannage.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const situations = [
-  { title: "Urgence Nocturne & Sécurité", desc: "Volet bloqué en position ouverte la nuit ou suite à une panne moteur ? Nous intervenons pour sécuriser votre domicile immédiatement.", urgency: "CRITIQUE", color: "border-service-rose/30", image: "/images/depannage/nuit.webp", data: ["Intervention : < 1h", "Dispo : 24h/24", "Sécurisation : Immédiate"] },
-  { title: "Tentative d'Effraction", desc: "Votre volet a été forcé ou endommagé ? Nous réparons les lames, les coulisses et renforçons la sécurité de votre installation.", urgency: "HAUTE", color: "border-service-orange/30", image: "/images/depannage/effraction.webp", data: ["Réparation : Lames/Axe", "Renfort : Anti-relevage", "Assurance : Devis agréé"] },
-  { title: "Dégâts Intempéries", desc: "Grêle, tempête ou vent violent ? Si votre volet est sorti de ses rails ou si le tablier est abîmé, nous intervenons rapidement.", urgency: "MOYENNE", color: "border-service-blue/30", image: "/images/depannage/intemperies.webp", data: ["Diagnostic : Structurel", "Pièces : Tablier/Lames", "Garantie : 2 ans"] },
+  { title: "Urgence Nocturne & Sécurité", desc: "Volet bloqué en position ouverte la nuit ou suite à une panne moteur ? Nous intervenons pour sécuriser votre domicile immédiatement.", urgency: "CRITIQUE", badgeColor: "bg-service-rose/90 text-white border-service-rose", color: "border-service-rose/30", image: "/images/depannage/nuit.webp", data: ["Intervention : < 1h", "Dispo : 24h/24", "Sécurisation : Immédiate"] },
+  { title: "Tentative d'Effraction", desc: "Votre volet a été forcé ou endommagé ? Nous réparons les lames, les coulisses et renforçons la sécurité de votre installation.", urgency: "HAUTE", badgeColor: "bg-service-orange/90 text-white border-service-orange", color: "border-service-orange/30", image: "/images/depannage/effraction.webp", data: ["Réparation : Lames/Axe", "Renfort : Anti-relevage", "Assurance : Devis agréé"] },
+  { title: "Dégâts Intempéries", desc: "Grêle, tempête ou vent violent ? Si votre volet est sorti de ses rails ou si le tablier est abîmé, nous intervenons rapidement.", urgency: "MOYENNE", badgeColor: "bg-service-blue/90 text-white border-service-blue", color: "border-service-blue/30", image: "/images/depannage/intemperies.webp", data: ["Diagnostic : Structurel", "Pièces : Tablier/Lames", "Garantie : 2 ans"] },
 ];
 
 const engagements = [
@@ -120,7 +120,7 @@ const DepannageExpressPage = () => {
                 <div className="relative h-56 overflow-hidden">
                   <img src={s.image} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <Badge className="absolute top-4 right-4 bg-service-rose text-white border-none text-xs font-bold">{s.urgency}</Badge>
+                  <Badge className={`absolute top-4 right-4 text-xs font-bold border ${s.badgeColor} shadow-md backdrop-blur-sm`}>{s.urgency}</Badge>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{s.title}</h3>
