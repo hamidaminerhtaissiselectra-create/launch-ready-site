@@ -1,7 +1,7 @@
 # 📋 CAHIER DES CHARGES COMPLET — Répar'Action Volets
 
-**Dernière mise à jour** : 4 mars 2026  
-**Version** : 3.0  
+**Dernière mise à jour** : 6 mars 2026  
+**Version** : 4.0  
 **Statut** : ✅ Production
 
 ---
@@ -50,7 +50,7 @@ Créer un site web ultra-professionnel optimisé **SEO**, **GEO** (Generative En
 | Route | Page | Statut |
 |-------|------|--------|
 | `/` | Page d'accueil | ✅ |
-| `/a-propos` | Qui sommes-nous | ✅ |
+| `/qui-sommes-nous` | Qui sommes-nous | ✅ |
 | `/blog` | Blog SEO (18 articles) | ✅ |
 | `/blog/:slug` | Article de blog | ✅ |
 | `/zones-intervention` | Zones d'intervention | ✅ |
@@ -61,13 +61,13 @@ Créer un site web ultra-professionnel optimisé **SEO**, **GEO** (Generative En
 | `/cgv` | CGV | ✅ |
 
 ### 4.2 Pages services (5 pages, 1500+ mots)
-| Route | Service |
-|-------|---------|
-| `/services/reparation-volets-roulants` | Réparation Volets Roulants |
-| `/services/installation-remplacement-volets` | Installation & Remplacement |
-| `/services/vitrerie-remplacement-vitrage` | Vitrerie & Remplacement Vitrage |
-| `/services/motorisation-domotique` | Motorisation & Domotique |
-| `/services/depannage-express` | Dépannage Express |
+| Route | Service | Statut |
+|-------|---------|--------|
+| `/services/reparation-volets-roulants` | Réparation Volets Roulants | ✅ |
+| `/services/installation-remplacement-volets` | Installation & Remplacement | ✅ |
+| `/services/vitrerie-remplacement-vitrage` | Vitrerie & Remplacement Vitrage | ✅ |
+| `/services/motorisation-domotique` | Motorisation & Domotique | ✅ |
+| `/services/depannage-express` | Dépannage Express | ✅ |
 
 ### 4.3 Pages zones localisées (53 pages SEO)
 
@@ -127,10 +127,11 @@ Chaque page interne affiche une section **LocalZonesGrid** en bas de page, montr
 - **Body** : Font sans-serif (texte)
 
 ### Composants réutilisables
-- Badges colorés par service
+- Badges colorés par service (style unifié : `bg-[color]/90 text-white border shadow-md backdrop-blur-sm`)
 - Cartes avec `card-shadow` / `card-shadow-hover`
 - Boutons : `variant="accent"`, `variant="accent-outline"`
 - Sections avec `bg-section-gradient`
+- Statistiques colorées avec tokens `text-service-blue`, `text-service-violet`, `text-service-emerald`, `text-service-orange`
 
 ---
 
@@ -142,8 +143,8 @@ Chaque page interne affiche une section **LocalZonesGrid** en bas de page, montr
 - ✅ URLs SEO-friendly
 - ✅ Balises ALT sur images
 - ✅ Maillage interne contextuel
-- ✅ Sitemap XML
-- ✅ Robots.txt
+- ✅ Sitemap XML (93 URLs)
+- ✅ Robots.txt (bots IA autorisés : GPTBot, ClaudeBot, PerplexityBot)
 
 ### Schema.org
 - ✅ LocalBusiness (enrichi : @id, foundingDate, hasCredential RGE/Qualibat)
@@ -164,7 +165,7 @@ Chaque page interne affiche une section **LocalZonesGrid** en bas de page, montr
 - Artisan RGE volets
 
 ### Blog SEO (18 articles)
-Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides motorisation, économies d'énergie, aides financières, volets solaires, articles hyper-locaux (Marais, Montmartre, Haussmann, Grands Boulevards, Neuilly)
+Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides motorisation, économies d'énergie, aides financières, volets solaires, articles hyper-locaux (Paris 15e, Marais, Boulogne, Saint-Denis, Versailles, Créteil)
 
 ---
 
@@ -176,11 +177,11 @@ Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides mot
 - CLS < 0.1
 
 ### Optimisations
-- ✅ Lazy loading images
-- ✅ Preconnect fonts / DNS-prefetch
-- ✅ Code splitting
+- ✅ Lazy loading images (composants et routes)
+- ✅ Code splitting (lazy imports React)
 - ✅ Images WebP optimisées
 - ✅ Responsive mobile-first
+- ✅ Framer Motion animations (fadeUp, stagger, parallaxe)
 
 ### Breakpoints
 - Mobile : < 640px (1 colonne)
@@ -189,41 +190,64 @@ Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides mot
 
 ---
 
-## 9. CE QUI RESTE À FAIRE
+## 9. FICHIERS DE DONNÉES
+
+| Fichier | Contenu | Lignes | Statut |
+|---------|---------|--------|--------|
+| `src/data/zonesPagesData.ts` | 53 pages zones (20 arrondissements + 33 villes IDF) | ~1568 | ✅ OK |
+| `src/data/blogArticles.ts` | 18 articles de blog SEO | ~1373 | ✅ OK |
+| `src/data/content.ts` | Contenu centralisé (contact, nav, hero, services) | ~100 | ✅ Nettoyé v4.0 |
+| `src/data/regionsData.ts` | Données régions Paris + IDF | ~55 | ✅ OK |
+| `src/data/idfCities.ts` | Mapping villes IDF par département | ~72 | ✅ OK |
+| `src/data/villes-geolocalisation.ts` | Coordonnées GPS des 53 zones | ~63 | ✅ OK |
+
+### Fichiers nettoyés (v4.0)
+- ❌ `src/data/citiesData.ts` — **Supprimé** (4463 lignes de données "HD Connect" d'un ancien projet, non utilisé)
+- ✅ `src/data/content.ts` — **Nettoyé** (suppression des références "HD Connect", remplacement par contenu Répar'Action Volets)
+- ✅ `src/hooks/usePhoneCall.tsx` — **Corrigé** (message WhatsApp mis à jour pour volets roulants)
+
+---
+
+## 10. HARMONISATION VISUELLE (v4.0)
+
+### ✅ Badges overlay services
+Style unifié sur toutes les pages services pour correspondre à la page d'accueil :
+- `bg-[service-color]/90 text-white border shadow-md backdrop-blur-sm`
+- Pages impactées : DepannageExpress, InstallationRemplacement, ReparationVolets, MotorisationDomotique, Vitrerie
+
+### ✅ Statistiques colorées
+Couleurs par token sémantique appliquées sur toutes les pages :
+- `text-service-blue`, `text-service-violet`, `text-service-emerald`, `text-service-orange`
+- Pages impactées : ZonesIntervention, ParisPage, IdFPage, MiniTestimonials, RegionHeroParallax, RepairShowcaseSection
+
+---
+
+## 11. CE QUI RESTE À FAIRE
 
 ### 🔴 Priorité haute
 - [ ] **Connexion Supabase** : formulaire de devis fonctionnel (envoi emails, stockage données)
-- [ ] **Harmonisation visuelle complète** : vérifier que TOUTES les pages (services, blog, zones, légales) utilisent les mêmes tokens de design, couleurs, espacements et styles de cartes que la page d'accueil
+- [ ] **Vérification rendu mobile** : tester toutes les pages sur mobile (badges, statistiques, cartes)
+- [ ] **Tests E2E** : vérifier tous les liens, redirections et le rendu sur chaque page
 
 ### 🟡 Priorité moyenne
 - [ ] **Google Business Profile** : configuration et optimisation
-- [ ] **Pages régions hors IDF** : activer les redirections vers des pages dédiées quand le contenu sera prêt (actuellement les cartes régions redirigent vers /zones-intervention)
-- [ ] **Optimisation images existantes** : vérifier poids, dimensions, alt-text de toutes les images
-- [ ] **Tests E2E** : vérifier tous les liens, redirections et le rendu mobile sur chaque page
+- [ ] **Pages régions hors IDF** : activer les redirections vers des pages dédiées quand le contenu sera prêt
+- [ ] **Optimisation images** : vérifier poids, dimensions, alt-text de toutes les images
+- [ ] **Preconnect fonts / DNS-prefetch** : ajouter dans index.html
 
 ### 🟢 Priorité basse
 - [ ] **Analytics** : Google Analytics / Tag Manager
 - [ ] **Avis Google** : intégration widget avis réels
 - [ ] **Newsletter** : capture email pour fidélisation
-- [ ] **Chat en direct** : WhatsApp Business API (optionnel)
-
-### ✅ Terminé récemment
-- [x] Images uniques pour les 53 pages de zone (Vincennes & Vitry-sur-Seine inclus)
-- [x] Suppression de la section RegionsSection (arrondissements/banlieue) de la page d'accueil
-- [x] Section LocalZonesGrid avec ordre aléatoire différent par page sur toutes les pages internes
-- [x] Consolidation documentation en fichier unique CAHIER_DES_CHARGES.md
-- [x] Section ServiceRegionsSection (régions de France) visible et dépliable sur la page d'accueil
-- [x] Images réelles de villes/monuments Paris & IDF pour les sections RepairShowcase des 5 pages services (Haussmann/Tour Eiffel, Sacré-Cœur, Place des Vosges, La Défense, Notre-Dame)
-- [x] Images réelles pour la page Qui Sommes-Nous (panorama Arc de Triomphe, cour parisienne, Versailles)
-- [x] Image réelle Boulevard Saint-Germain pour le hero du Blog
-- [x] Alt-text SEO uniques et descriptifs sur toutes les images mises à jour
+- [ ] **WhatsApp Business** : intégration API (optionnel)
 
 ---
 
-## 10. HISTORIQUE DES VERSIONS
+## 12. HISTORIQUE DES VERSIONS
 
 | Version | Date | Changements |
 |---------|------|-------------|
+| 4.0 | 06/03/2026 | Nettoyage données (suppression HD Connect), harmonisation badges et statistiques colorées sur toutes les pages, mise à jour documentation |
 | 3.0 | 04/03/2026 | Consolidation documentation, 18 articles blog, harmonisation design, section régions France complète |
 | 2.0 | 23/02/2026 | 53 pages localisées, animations avancées, mobile-first |
 | 1.5 | 22/02/2026 | Animations et effets visuels |
@@ -231,7 +255,7 @@ Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides mot
 
 ---
 
-## 11. DÉPLOIEMENT
+## 13. DÉPLOIEMENT
 
 ```bash
 # Installation
@@ -261,4 +285,4 @@ pnpm run check
 
 ---
 
-**Répar'Action Volets — Cahier des charges v3.0**
+**Répar'Action Volets — Cahier des charges v4.0**
