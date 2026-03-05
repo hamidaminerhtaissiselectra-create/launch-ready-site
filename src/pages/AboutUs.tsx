@@ -12,9 +12,9 @@ import QuoteFormSection from "@/components/QuoteFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LocalZonesGrid from "@/components/LocalZonesGrid";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import aboutTeamImg from "@/assets/about-team-v2.webp";
-import aboutValuesImg from "@/assets/about-values.webp";
-import aboutExpertiseImg from "@/assets/about-expertise-v2.webp";
+import aboutTeamImg from "@/assets/paris-panorama-about.webp";
+import aboutValuesImg from "@/assets/idf-versailles-valeurs.webp";
+import aboutExpertiseImg from "@/assets/paris-cour-expertise.webp";
 
 const expertiseItems = [
   { icon: Trophy, title: "10+ ans d'expérience", desc: "Depuis plus de 10 ans, nous intervenons sur des milliers de volets roulants. Notre expérience nous permet de diagnostiquer et résoudre rapidement tout type de panne.", color: "bg-service-blue", iconShadow: "shadow-[0_4px_14px_hsl(213,72%,50%,0.35)]" },
@@ -93,7 +93,7 @@ const AboutUsPage = () => {
       {/* Hero Section with Background Image */}
       <section ref={heroRef} className="relative pt-24 pb-16 min-h-[60vh] flex items-center overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: bgY }}>
-          <img src={aboutTeamImg} alt="Notre équipe d'experts" className="w-full h-[120%] object-cover" />
+          <img src={aboutTeamImg} alt="Panorama de Paris avec l'Arc de Triomphe — zone d'intervention Répar'Action Volets" className="w-full h-[120%] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40" />
         </motion.div>
         <div className="container mx-auto px-4 relative z-10">
@@ -129,7 +129,7 @@ const AboutUsPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <motion.div {...fadeLeft} className="rounded-2xl overflow-hidden card-shadow">
-              <img src={aboutExpertiseImg} alt="Notre expertise et savoir-faire" className="w-full h-auto object-cover" />
+              <img src={aboutExpertiseImg} alt="Cour intérieure parisienne avec volets roulants — expertise Répar'Action Volets" className="w-full h-auto object-cover" />
             </motion.div>
             <motion.div {...fadeRight}>
               <h2 className="font-display text-3xl font-bold text-foreground mb-6">Notre Expertise & Savoir-Faire</h2>
@@ -211,7 +211,7 @@ const AboutUsPage = () => {
               </div>
             </motion.div>
             <motion.div {...fadeRight} className="rounded-2xl overflow-hidden card-shadow">
-              <img src={aboutValuesImg} alt="Nos valeurs et engagement qualité" className="w-full h-auto object-cover" />
+              <img src={aboutValuesImg} alt="Quartier résidentiel de Versailles en Île-de-France — nos valeurs de proximité" className="w-full h-auto object-cover" />
             </motion.div>
           </div>
         </div>

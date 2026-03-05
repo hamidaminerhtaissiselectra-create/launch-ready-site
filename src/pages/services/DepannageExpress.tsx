@@ -14,7 +14,7 @@ import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
 import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
-import emergencyTechnicianImg from "@/assets/emergency-technician-section.webp";
+import emergencyTechnicianImg from "@/assets/paris-sacre-coeur-depannage.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const situations = [
@@ -145,9 +145,9 @@ const DepannageExpressPage = () => {
 
       <ProcessSection />
       <QuoteFormSection />
-      <RepairShowcaseSection image={emergencyTechnicianImg} title="Réactivité & Professionnalisme en Urgence"
-        description="Une panne de volet roulant ne peut pas attendre. Nos techniciens d'urgence sont formés pour intervenir rapidement, même en conditions difficiles ou la nuit."
-        highlights={["Intervention dans l'heure pour les urgences de sécurité", "Disponibilité 24h/24, 7 jours sur 7", "Pièces de rechange immédiatement disponibles", "Diagnostic gratuit et transparence totale"]}
+      <RepairShowcaseSection image={emergencyTechnicianImg} title="Dépannage Urgence à Paris — Montmartre & Sacré-Cœur"
+        description="De jour comme de nuit, nos équipes sillonnent Paris pour résoudre vos urgences volets. Du quartier de Montmartre aux Grands Boulevards, nous intervenons dans l'heure pour sécuriser votre domicile."
+        highlights={["Intervention dans l'heure à Paris et petite couronne", "Disponibilité 24h/24, 7 jours sur 7", "Connaissance parfaite des quartiers parisiens", "Diagnostic gratuit et transparence totale"]}
       />
       <FAQSection />
       <TestimonialsSection />

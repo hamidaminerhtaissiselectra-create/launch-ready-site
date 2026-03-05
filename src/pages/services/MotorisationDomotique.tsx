@@ -17,7 +17,7 @@ import FAQSection from "@/components/FAQSection";
 import motorizationWiredImg from "@/assets/motorization-wired.webp";
 import motorizationRadioImg from "@/assets/motorization-radio.webp";
 import motorizationSmartImg from "@/assets/motorization-smart.webp";
-import motorizationTechnicianImg from "@/assets/motorization-technician-section.webp";
+import motorizationTechnicianImg from "@/assets/paris-defense-motorisation.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const solutions = [
@@ -157,9 +157,9 @@ const MotorisationDomotiquePage = () => {
 
       <ProcessSection />
       <QuoteFormSection />
-      <RepairShowcaseSection image={motorizationTechnicianImg} title="Expertise en Domotique & Motorisation"
-        description="Motoriser un volet roulant existant demande une expertise particulière pour choisir le moteur adapté au poids du tablier et au diamètre de l'axe."
-        highlights={["Diagnostic de compatibilité de vos volets actuels", "Installation de moteurs silencieux et performants", "Configuration domotique et appairage smartphone", "Formation à l'utilisation de vos nouveaux équipements"]}
+      <RepairShowcaseSection image={motorizationTechnicianImg} title="Motorisation Connectée — La Défense & Bureaux IDF"
+        description="Du quartier d'affaires de La Défense aux résidences modernes d'Île-de-France, nous motorisons et connectons vos volets aux dernières technologies smart home. Solutions adaptées aux immeubles tertiaires et résidentiels."
+        highlights={["Motorisation adaptée aux bureaux et résidences modernes", "Installation de moteurs silencieux et performants", "Configuration domotique et appairage smartphone", "Compatibilité Google Home, Alexa, Apple HomeKit"]}
       />
       <FAQSection />
       <TestimonialsSection />

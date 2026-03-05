@@ -213,6 +213,10 @@ Sujets : entretien volets, comparatifs marques (Somfy vs Bubendorff), guides mot
 - [x] Section LocalZonesGrid avec ordre aléatoire différent par page sur toutes les pages internes
 - [x] Consolidation documentation en fichier unique CAHIER_DES_CHARGES.md
 - [x] Section ServiceRegionsSection (régions de France) visible et dépliable sur la page d'accueil
+- [x] Images réelles de villes/monuments Paris & IDF pour les sections RepairShowcase des 5 pages services (Haussmann/Tour Eiffel, Sacré-Cœur, Place des Vosges, La Défense, Notre-Dame)
+- [x] Images réelles pour la page Qui Sommes-Nous (panorama Arc de Triomphe, cour parisienne, Versailles)
+- [x] Image réelle Boulevard Saint-Germain pour le hero du Blog
+- [x] Alt-text SEO uniques et descriptifs sur toutes les images mises à jour
 
 ---
 

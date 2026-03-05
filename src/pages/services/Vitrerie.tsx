@@ -14,7 +14,7 @@ import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
 import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
-import glazierTechnicianImg from "@/assets/glazier-technician-section.webp";
+import glazierTechnicianImg from "@/assets/paris-notre-dame-vitrerie.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const typesVitrage = [
@@ -159,9 +159,9 @@ const VitreriePage = () => {
 
       <ProcessSection />
       <QuoteFormSection />
-      <RepairShowcaseSection image={glazierTechnicianImg} title="Expertise en Vitrerie & Sécurité"
-        description="Le remplacement d'un vitrage demande une précision millimétrée et une connaissance approfondie des matériaux."
-        highlights={["Remplacement de tous types de vitrages (simple, double, triple)", "Mise en sécurité immédiate après bris de glace", "Vitrages certifiés conformés aux normes", "Accompagnement pour la prise en charge assurance"]}
+      <RepairShowcaseSection image={glazierTechnicianImg} title="Vitrerie d'Excellence — Île de la Cité & Bords de Seine"
+        description="Des vitraux historiques de l'Île de la Cité aux baies vitrées modernes des quais de Seine, notre expertise en vitrerie couvre tous les besoins. Remplacement, sécurisation et installation avec une précision millimétrée."
+        highlights={["Expertise des vitrages patrimoniaux et contemporains", "Mise en sécurité immédiate après bris de glace", "Vitrages certifiés conformes aux normes en vigueur", "Accompagnement pour la prise en charge assurance"]}
       />
       <FAQSection />
       <TestimonialsSection />
