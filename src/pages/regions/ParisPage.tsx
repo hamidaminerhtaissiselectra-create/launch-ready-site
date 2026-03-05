@@ -54,10 +54,10 @@ const ParisPage = () => {
   ];
 
   const stats = [
-    { icon: Building2, value: "20", label: "Arrondissements" },
-    { icon: Clock, value: "24-48h", label: "Délai d'intervention" },
-    { icon: Users, value: "2000+", label: "Clients parisiens" },
-    { icon: Award, value: "4.9/5", label: "Note moyenne" }
+    { icon: Building2, value: "20", label: "Arrondissements", color: "text-service-violet" },
+    { icon: Clock, value: "24-48h", label: "Délai d'intervention", color: "text-service-orange" },
+    { icon: Users, value: "2000+", label: "Clients parisiens", color: "text-service-emerald" },
+    { icon: Award, value: "4.9/5", label: "Note moyenne", color: "text-service-blue" }
   ];
 
   const arrondissementsGroups = [
@@ -274,7 +274,7 @@ const ParisPage = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-4">
                   <stat.icon className="w-6 h-6" />
                 </div>
-                <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+                <div className={`text-3xl font-bold ${stat.color}`}>{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}

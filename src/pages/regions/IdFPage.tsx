@@ -54,10 +54,10 @@ const IdFPage = () => {
   ];
 
   const stats = [
-    { icon: MapPin, value: "7", label: "Départements" },
-    { icon: Building2, value: "50+", label: "Villes desservies" },
-    { icon: Users, value: "3000+", label: "Clients satisfaits" },
-    { icon: Clock, value: "48-72h", label: "Délai d'intervention" }
+    { icon: MapPin, value: "7", label: "Départements", color: "text-service-blue" },
+    { icon: Building2, value: "50+", label: "Villes desservies", color: "text-service-violet" },
+    { icon: Users, value: "3000+", label: "Clients satisfaits", color: "text-service-emerald" },
+    { icon: Clock, value: "48-72h", label: "Délai d'intervention", color: "text-service-orange" }
   ];
 
   const departements = [
@@ -317,7 +317,7 @@ const IdFPage = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-4">
                   <stat.icon className="w-6 h-6" />
                 </div>
-                <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+                <div className={`text-3xl font-bold ${stat.color}`}>{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}

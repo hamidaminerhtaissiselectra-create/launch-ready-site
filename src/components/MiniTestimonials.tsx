@@ -90,9 +90,9 @@ const MiniTestimonials = ({ location, showCTA = true }: MiniTestimonialsProps) =
   });
 
   const stats = [
-    { value: "2000+", label: "Clients" },
-    { value: "4.9/5", label: "Note" },
-    { value: "98%", label: "Recommandent" },
+    { value: "2000+", label: "Clients", color: "text-service-blue" },
+    { value: "4.9/5", label: "Note", color: "text-service-orange" },
+    { value: "98%", label: "Recommandent", color: "text-service-emerald" },
   ];
 
   return (
@@ -103,7 +103,7 @@ const MiniTestimonials = ({ location, showCTA = true }: MiniTestimonialsProps) =
           <div className="flex justify-center gap-8 mb-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-primary">{stat.value}</div>
+                <div className={`text-2xl md:text-3xl font-bold ${stat.color}`}>{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}

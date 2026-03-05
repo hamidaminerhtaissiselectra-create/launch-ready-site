@@ -25,9 +25,9 @@ const RegionHeroParallax = ({ region, breadcrumbItems }: RegionHeroParallaxProps
 
   // Stats spécifiques à la région
   const stats = [
-    { icon: Building2, label: "Départements", value: `${region.departments.length}` },
-    { icon: Award, label: "Clients satisfaits", value: "98%" },
-    { icon: Clock, label: "Intervention", value: "< 48h" },
+    { icon: Building2, label: "Départements", value: `${region.departments.length}`, color: "text-service-violet" },
+    { icon: Award, label: "Clients satisfaits", value: "98%", color: "text-service-emerald" },
+    { icon: Clock, label: "Intervention", value: "< 48h", color: "text-service-orange" },
   ];
 
   return (
@@ -135,7 +135,7 @@ const RegionHeroParallax = ({ region, breadcrumbItems }: RegionHeroParallaxProps
                 className="flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50"
               >
                 <stat.icon className="w-5 h-5 text-primary" />
-                <span className="font-bold text-foreground">{stat.value}</span>
+                <span className={`font-bold ${stat.color}`}>{stat.value}</span>
                 <span className="text-muted-foreground text-sm">{stat.label}</span>
               </motion.div>
             ))}
