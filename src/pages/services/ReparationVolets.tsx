@@ -14,7 +14,7 @@ import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
 import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
-import repairTechnicianImg from "@/assets/repair-technician-section.webp";
+import repairTechnicianImg from "@/assets/paris-haussmann-reparation.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const pannesCourantes = [
@@ -123,9 +123,9 @@ const ReparationVoletsPage = () => {
 
       <ProcessSection />
       <QuoteFormSection />
-      <RepairShowcaseSection image={repairTechnicianImg} title="Expertise Technique & Savoir-Faire"
-        description="Nos techniciens certifiés disposent de plus de 10 ans d'expérience dans la réparation de volets roulants. Ils interviennent avec professionnalisme et efficacité, diagnostiquant rapidement le problème et le résolvant en une seule visite dans 95% des cas. Chaque intervention est réalisée avec des pièces de qualité et un respect des normes de sécurité."
-        highlights={["Diagnostic gratuit et sans engagement", "Pièces de rechange en stock dans le véhicule", "Intervention rapide : sous 48 heures", "Garantie 3 ans pièces et main d'œuvre"]}
+      <RepairShowcaseSection image={repairTechnicianImg} title="Intervention Rapide à Paris — Quartiers Haussmanniens"
+        description="Nous intervenons dans tous les arrondissements de Paris, des immeubles haussmanniens du 7e et 16e aux résidences du Marais et de Montmartre. Nos techniciens connaissent les spécificités des volets roulants parisiens et disposent de pièces adaptées à chaque type de bâtiment."
+        highlights={["Intervention dans tous les arrondissements de Paris", "Expertise des immeubles haussmanniens et historiques", "Pièces de rechange en stock dans le véhicule", "Garantie 3 ans pièces et main d'œuvre"]}
       />
       <FAQSection />
       <TestimonialsSection />

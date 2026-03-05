@@ -14,7 +14,7 @@ import QuoteFormSection from "@/components/QuoteFormSection";
 import RepairShowcaseSection from "@/components/RepairShowcaseSection";
 import LocalZonesGrid from "@/components/LocalZonesGrid";
 import FAQSection from "@/components/FAQSection";
-import installationTechnicianImg from "@/assets/installation-technician-section.webp";
+import installationTechnicianImg from "@/assets/paris-vosges-installation.webp";
 import { fadeUp, staggerItem, hoverLift, heroEntry } from "@/lib/animations";
 
 const avantages = [
@@ -149,9 +149,9 @@ const InstallationRemplacementPage = () => {
 
       <ProcessSection />
       <QuoteFormSection />
-      <RepairShowcaseSection image={installationTechnicianImg} title="Installation Professionnelle & Finitions Soignées"
-        description="L'installation d'un volet roulant est une opération technique qui nécessite précision et savoir-faire. Nos techniciens certifiés assurent une pose parfaite, garantissant une isolation optimale et un fonctionnement silencieux sur le long terme."
-        highlights={["Prise de mesures laser pour un sur-mesure parfait", "Installation propre sans dégradation de vos façades", "Réglage précis des fins de course et des moteurs", "Nettoyage complet du chantier après intervention"]}
+      <RepairShowcaseSection image={installationTechnicianImg} title="Installation sur Mesure — Place des Vosges & Marais"
+        description="Nous installons des volets roulants adaptés à chaque type d'architecture parisienne, des hôtels particuliers du Marais aux résidences de standing de Versailles. Notre expertise garantit une intégration parfaite, respectant l'esthétique de votre façade."
+        highlights={["Adaptation aux contraintes architecturales parisiennes", "Installation propre sans dégradation de vos façades", "Respect du patrimoine historique et des copropriétés", "Nettoyage complet du chantier après intervention"]}
       />
       <FAQSection />
       <TestimonialsSection />

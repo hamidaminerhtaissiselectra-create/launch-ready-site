@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogArticles } from "@/data/blogArticles";
-import blogHeroImg from "@/assets/blog-hero.webp";
+import blogHeroImg from "@/assets/paris-saint-germain-blog.webp";
 
 const BlogPage = () => {
   const heroRef = useRef<HTMLElement>(null);
@@ -33,7 +33,7 @@ const BlogPage = () => {
       {/* Hero */}
       <section ref={heroRef} className="relative pt-24 pb-16 min-h-[60vh] flex items-center overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: bgY }}>
-          <img src={blogHeroImg} alt="Blog Expert Volets" className="w-full h-[120%] object-cover" />
+          <img src={blogHeroImg} alt="Boulevard Saint-Germain à Paris — Blog expert volets et vitrerie Répar'Action" className="w-full h-[120%] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40" />
         </motion.div>
         <div className="container mx-auto px-4 relative z-10">
