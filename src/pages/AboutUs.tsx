@@ -167,16 +167,16 @@ const AboutUsPage = () => {
           </motion.div>
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { number: "10+", label: "Années d'expérience", icon: Trophy, color: "bg-service-blue", iconShadow: "shadow-[0_4px_14px_hsl(213,72%,50%,0.35)]" },
-              { number: "5000+", label: "Interventions réalisées", icon: Zap, color: "bg-service-orange", iconShadow: "shadow-[0_4px_14px_hsl(25,90%,55%,0.35)]" },
-              { number: "500+", label: "Clients satisfaits", icon: Users, color: "bg-service-emerald", iconShadow: "shadow-[0_4px_14px_hsl(160,70%,40%,0.35)]" },
-              { number: "4.9/5", label: "Note moyenne", icon: Award, color: "bg-service-violet", iconShadow: "shadow-[0_4px_14px_hsl(260,65%,55%,0.35)]" },
+              { number: "10+", label: "Années d'expérience", icon: Trophy, color: "bg-service-blue", iconShadow: "shadow-[0_4px_14px_hsl(213,72%,50%,0.35)]", textColor: "text-service-blue" },
+              { number: "5000+", label: "Interventions réalisées", icon: Zap, color: "bg-service-orange", iconShadow: "shadow-[0_4px_14px_hsl(25,90%,55%,0.35)]", textColor: "text-service-orange" },
+              { number: "500+", label: "Clients satisfaits", icon: Users, color: "bg-service-emerald", iconShadow: "shadow-[0_4px_14px_hsl(160,70%,40%,0.35)]", textColor: "text-service-emerald" },
+              { number: "4.9/5", label: "Note moyenne", icon: Award, color: "bg-service-violet", iconShadow: "shadow-[0_4px_14px_hsl(260,65%,55%,0.35)]", textColor: "text-service-violet" },
             ].map((stat, i) => (
               <motion.div key={stat.label} {...staggerItem(i)} {...hoverLift} className="bg-card rounded-xl p-8 border border-border card-shadow text-center hover:card-shadow-hover transition-all">
                 <div className={`w-14 h-14 rounded-2xl ${stat.color} ${stat.iconShadow} flex items-center justify-center mx-auto mb-4 border border-white/20`}>
                   <stat.icon className="h-7 w-7 text-white" />
                 </div>
-                <div className="font-display text-4xl font-extrabold text-foreground mb-2">{stat.number}</div>
+                <div className={`font-display text-4xl font-extrabold ${stat.textColor} mb-2`}>{stat.number}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
