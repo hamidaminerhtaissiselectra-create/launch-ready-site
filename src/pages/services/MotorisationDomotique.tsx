@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Cpu, CheckCircle2, ArrowRight, Phone, ChevronRight, Smartphone, Zap, Shield, Clock, Settings } from "lucide-react";
@@ -32,11 +32,19 @@ const MotorisationDomotiquePage = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   useSEO({
-    title: "Motorisation & Domotique Volets Roulants | Somfy & Connecté | Répar'Action Volets",
-    description: "Motorisez vos volets manuels avec des solutions filaires, radio ou connectées Somfy. Contrôle smartphone, programmation horaire, compatibilité Google Home & Alexa.",
-    keywords: "motorisation volet roulant, domotique volet, Somfy, volet connecté, Google Home, Alexa, télécommande volet",
+    title: "Motorisation Volet Roulant Paris | Somfy, Radio, Connecté Google Home & Alexa | Répar'Action Volets",
+    description: "Motorisez vos volets manuels à Paris & IDF : moteurs filaires, radio ou connectés Somfy TaHoma. Contrôle smartphone, Google Home, Alexa. Dès 200€/volet, garantie 5 ans moteur.",
+    keywords: "motorisation volet roulant Paris, moteur volet Somfy, volet connecté Google Home, volet Alexa, domotique volet roulant, télécommande volet, motorisation sans fil",
     canonicalUrl: "https://reparaction-volets.fr/services/motorisation-domotique",
   });
+
+  useEffect(() => {
+    const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "name": "Motorisation & Domotique Volets Roulants", "provider": { "@type": "LocalBusiness", "@id": "https://reparaction-volets.fr/#business" }, "areaServed": [{ "@type": "City", "name": "Paris" }, { "@type": "State", "name": "Île-de-France" }], "description": "Motorisation de volets manuels avec moteurs Somfy filaires, radio ou connectés. Compatible Google Home, Alexa.", "serviceType": "Motorisation volet roulant", "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "200", "highPrice": "450" }, "brand": [{ "@type": "Brand", "name": "Somfy" }, { "@type": "Brand", "name": "Bubendorff" }] };
+    const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://reparaction-volets.fr" }, { "@type": "ListItem", "position": 2, "name": "Motorisation & Domotique", "item": "https://reparaction-volets.fr/services/motorisation-domotique" }] };
+    const s1 = document.createElement('script'); s1.type = 'application/ld+json'; s1.innerHTML = JSON.stringify(serviceSchema); document.head.appendChild(s1);
+    const s2 = document.createElement('script'); s2.type = 'application/ld+json'; s2.innerHTML = JSON.stringify(breadcrumbSchema); document.head.appendChild(s2);
+    return () => { document.head.removeChild(s1); document.head.removeChild(s2); };
+  }, []);
 
   return (
     <main className="relative">

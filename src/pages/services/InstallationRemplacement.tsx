@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RefreshCcw, CheckCircle2, ArrowRight, Phone, Shield, ChevronRight, Thermometer, Volume2, Sun } from "lucide-react";
@@ -36,11 +36,19 @@ const InstallationRemplacementPage = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   useSEO({
-    title: "Installation & Remplacement Volets Roulants | Sur-Mesure Paris & France | Répar'Action Volets",
-    description: "Installation et remplacement de volets roulants sur-mesure en aluminium, PVC ou solaire. Fabrication personnalisée, pose professionnelle, garantie 3 ans. Devis gratuit.",
-    keywords: "installation volet roulant, remplacement volet, volet aluminium, volet PVC, volet solaire, pose volet, Paris",
+    title: "Installation & Remplacement Volets Roulants Paris | Alu, PVC, Solaire Sur-Mesure | Répar'Action Volets",
+    description: "Installation volet roulant sur-mesure à Paris & IDF : aluminium, PVC ou solaire Somfy/Bubendorff. Pose professionnelle, éligible MaPrimeRénov', garantie 3 ans. Devis gratuit personnalisé.",
+    keywords: "installation volet roulant Paris, remplacement volet roulant, volet aluminium sur mesure, volet PVC, volet solaire Somfy, pose volet roulant IDF, artisan RGE installation volet",
     canonicalUrl: "https://reparaction-volets.fr/services/installation-remplacement-volets",
   });
+
+  useEffect(() => {
+    const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "name": "Installation & Remplacement de Volets Roulants", "provider": { "@type": "LocalBusiness", "@id": "https://reparaction-volets.fr/#business" }, "areaServed": [{ "@type": "City", "name": "Paris" }, { "@type": "State", "name": "Île-de-France" }], "description": "Installation et remplacement de volets roulants sur-mesure en aluminium, PVC ou solaire. Éligible MaPrimeRénov'.", "serviceType": "Installation volet roulant", "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "350", "highPrice": "1200" } };
+    const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://reparaction-volets.fr" }, { "@type": "ListItem", "position": 2, "name": "Installation & Remplacement", "item": "https://reparaction-volets.fr/services/installation-remplacement-volets" }] };
+    const s1 = document.createElement('script'); s1.type = 'application/ld+json'; s1.innerHTML = JSON.stringify(serviceSchema); document.head.appendChild(s1);
+    const s2 = document.createElement('script'); s2.type = 'application/ld+json'; s2.innerHTML = JSON.stringify(breadcrumbSchema); document.head.appendChild(s2);
+    return () => { document.head.removeChild(s1); document.head.removeChild(s2); };
+  }, []);
 
   return (
     <main className="relative">

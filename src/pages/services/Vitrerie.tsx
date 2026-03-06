@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { GlassWater, CheckCircle2, ArrowRight, Phone, ChevronRight, AlertTriangle, ShieldCheck } from "lucide-react";
@@ -36,11 +36,19 @@ const VitreriePage = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   useSEO({
-    title: "Vitrerie & Remplacement Vitrage | Urgence Bris de Glace 7j/7 | Répar'Action Volets",
-    description: "Remplacement de vitrage en urgence 7j/7. Double vitrage, vitrage anti-effraction, acoustique. Devis gratuit.",
-    keywords: "vitrerie, remplacement vitrage, bris de glace, double vitrage, vitrage anti-effraction, urgence vitrerie, Paris",
+    title: "Vitrerie Paris | Remplacement Vitrage Urgence 7j/7, Double Vitrage & Anti-Effraction | Répar'Action Volets",
+    description: "Vitrier professionnel à Paris & IDF : remplacement vitrage en urgence 7j/7, double vitrage thermique, vitrage anti-effraction feuilleté, acoustique. Prise en charge assurance. Devis gratuit.",
+    keywords: "vitrerie Paris, remplacement vitrage urgence, bris de glace Paris, double vitrage prix, vitrage anti-effraction, vitrier urgence 7j/7, remplacement vitre IDF",
     canonicalUrl: "https://reparaction-volets.fr/services/vitrerie-remplacement-vitrage",
   });
+
+  useEffect(() => {
+    const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "name": "Vitrerie & Remplacement de Vitrage", "provider": { "@type": "LocalBusiness", "@id": "https://reparaction-volets.fr/#business" }, "areaServed": [{ "@type": "City", "name": "Paris" }, { "@type": "State", "name": "Île-de-France" }], "description": "Remplacement de vitrage en urgence 7j/7 : double vitrage, anti-effraction, acoustique, dépoli. Prise en charge assurance.", "serviceType": "Vitrerie remplacement vitrage" };
+    const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://reparaction-volets.fr" }, { "@type": "ListItem", "position": 2, "name": "Vitrerie & Vitrage", "item": "https://reparaction-volets.fr/services/vitrerie-remplacement-vitrage" }] };
+    const s1 = document.createElement('script'); s1.type = 'application/ld+json'; s1.innerHTML = JSON.stringify(serviceSchema); document.head.appendChild(s1);
+    const s2 = document.createElement('script'); s2.type = 'application/ld+json'; s2.innerHTML = JSON.stringify(breadcrumbSchema); document.head.appendChild(s2);
+    return () => { document.head.removeChild(s1); document.head.removeChild(s2); };
+  }, []);
 
   return (
     <main className="relative">

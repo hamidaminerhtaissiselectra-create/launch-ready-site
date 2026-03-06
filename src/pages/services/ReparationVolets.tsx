@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Wrench, ArrowRight, Phone, ChevronRight, AlertTriangle, CheckCircle2, Shield, Clock, Award } from "lucide-react";
@@ -32,11 +32,30 @@ const ReparationVoletsPage = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   useSEO({
-    title: "Réparation de Volets Roulants | Dépannage Express Paris & France | Répar'Action Volets",
-    description: "Volet bloqué, moteur en panne, sangle cassée ? Nos techniciens experts interviennent rapidement pour diagnostiquer et réparer votre volet roulant. Diagnostic gratuit, garantie 3 ans.",
-    keywords: "réparation volet roulant, dépannage volet, volet bloqué, moteur volet, sangle cassée, Paris, Île-de-France",
+    title: "Réparation de Volets Roulants à Paris | Volet Bloqué, Moteur HS, Sangle Cassée | Répar'Action Volets",
+    description: "Expert réparation volet roulant à Paris & IDF. Volet bloqué, moteur Somfy/Bubendorff en panne, sangle cassée ? Diagnostic gratuit, intervention sous 48h, garantie 3 ans pièces & MO. Devis en ligne.",
+    keywords: "réparation volet roulant Paris, dépannage volet roulant, volet bloqué Paris, moteur volet Somfy, sangle volet cassée, artisan RGE volet, réparation volet Île-de-France",
     canonicalUrl: "https://reparaction-volets.fr/services/reparation-volets-roulants",
   });
+
+  useEffect(() => {
+    const serviceSchema = {
+      "@context": "https://schema.org", "@type": "Service",
+      "name": "Réparation de Volets Roulants",
+      "provider": { "@type": "LocalBusiness", "@id": "https://reparaction-volets.fr/#business" },
+      "areaServed": [{ "@type": "City", "name": "Paris" }, { "@type": "State", "name": "Île-de-France" }],
+      "description": "Réparation rapide de tous types de volets roulants : manuels, électriques, solaires. Diagnostic gratuit, devis transparent, garantie 3 ans pièces et main d'œuvre.",
+      "serviceType": "Réparation volet roulant",
+      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "80-350" }
+    };
+    const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://reparaction-volets.fr" },
+      { "@type": "ListItem", "position": 2, "name": "Réparation de Volets Roulants", "item": "https://reparaction-volets.fr/services/reparation-volets-roulants" }
+    ]};
+    const s1 = document.createElement('script'); s1.type = 'application/ld+json'; s1.innerHTML = JSON.stringify(serviceSchema); document.head.appendChild(s1);
+    const s2 = document.createElement('script'); s2.type = 'application/ld+json'; s2.innerHTML = JSON.stringify(breadcrumbSchema); document.head.appendChild(s2);
+    return () => { document.head.removeChild(s1); document.head.removeChild(s2); };
+  }, []);
 
   return (
     <main className="relative">

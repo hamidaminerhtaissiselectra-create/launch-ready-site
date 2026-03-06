@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Zap, ArrowRight, Phone, ChevronRight, Clock, Shield, AlertTriangle, Wrench, ShieldAlert } from "lucide-react";
@@ -36,11 +36,19 @@ const DepannageExpressPage = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   useSEO({
-    title: "Dépannage Express Volets Roulants | Urgence 7j/7 Paris & France | Répar'Action Volets",
-    description: "Service de dépannage express pour volets roulants bloqués ou en panne. Intervention le jour même à Paris et en Île-de-France. Disponible 7j/7, diagnostic gratuit.",
-    keywords: "dépannage volet roulant, urgence volet, intervention rapide volet, volet bloqué urgence, Paris, 7j/7",
+    title: "Dépannage Express Volets Roulants Paris | Urgence 7j/7, Jour Même | Répar'Action Volets",
+    description: "Dépannage express volet roulant bloqué à Paris & IDF. Intervention le jour même 7j/7, urgences nocturnes, effraction, intempéries. Diagnostic gratuit, techniciens certifiés RGE.",
+    keywords: "dépannage express volet roulant, urgence volet bloqué Paris, intervention jour même volet, dépannage volet 7j/7, volet roulant en panne urgence",
     canonicalUrl: "https://reparaction-volets.fr/services/depannage-express",
   });
+
+  useEffect(() => {
+    const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "name": "Dépannage Express Volets Roulants", "provider": { "@type": "LocalBusiness", "@id": "https://reparaction-volets.fr/#business" }, "areaServed": [{ "@type": "City", "name": "Paris" }, { "@type": "State", "name": "Île-de-France" }], "description": "Service de dépannage express pour volets roulants bloqués ou en panne. Intervention le jour même 7j/7.", "serviceType": "Dépannage urgence volet roulant" };
+    const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://reparaction-volets.fr" }, { "@type": "ListItem", "position": 2, "name": "Dépannage Express", "item": "https://reparaction-volets.fr/services/depannage-express" }] };
+    const s1 = document.createElement('script'); s1.type = 'application/ld+json'; s1.innerHTML = JSON.stringify(serviceSchema); document.head.appendChild(s1);
+    const s2 = document.createElement('script'); s2.type = 'application/ld+json'; s2.innerHTML = JSON.stringify(breadcrumbSchema); document.head.appendChild(s2);
+    return () => { document.head.removeChild(s1); document.head.removeChild(s2); };
+  }, []);
 
   return (
     <main className="relative">
